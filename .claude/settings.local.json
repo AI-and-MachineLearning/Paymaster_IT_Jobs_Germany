@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/Scripts/python fortune500-Germany-export.py --input fortune500.csv --output fortune500_present_in_germany.xlsx)"
+    ]
+  }
+}
