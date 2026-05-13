@@ -72,19 +72,34 @@ TECH_ALLOWLIST_REGEX = re.compile(
 # COMPANY SOURCES
 # ----------------------------
 # source_type: "greenhouse" | "lever" | "workable" | "manual"
+
+# disabling the greenhouse Omnipresent call since it is a bad token, replacing the following code with other code:
+#
+#     original code:
+#         {
+#             "company": "Omnipresent",
+#             "source_type": "greenhouse",
+#             "token_or_site": "omnipresent",
+#             "portal_url": "https://boards.greenhouse.io/omnipresent"
+#         },
+#
+#     new code:
+#         {
+#             "company": "Omnipresent",
+#             "source_type": "manual",
+#             "token_or_site": "",
+#             "portal_url": "https://<put-the-real-omnipresent-careers-url-here>"
+#         },
+#
+#     and removed the folloing as well:
+#             {
+#                 "company": "Remote",
+#                 "source_type": "greenhouse",
+#                 "token_or_site": "remotereferralboardinternaluseonly",
+#                 "portal_url": "https://job-boards.greenhouse.io/remotereferralboardinternaluseonly"
+#             },
+
 SOURCES: List[Dict[str, str]] = [
-    {
-        "company": "Omnipresent",
-        "source_type": "greenhouse",
-        "token_or_site": "omnipresent",
-        "portal_url": "https://boards.greenhouse.io/omnipresent"
-    },
-    {
-        "company": "Remote",
-        "source_type": "greenhouse",
-        "token_or_site": "remotereferralboardinternaluseonly",
-        "portal_url": "https://job-boards.greenhouse.io/remotereferralboardinternaluseonly"
-    },
     {
         "company": "RemoFirst",
         "source_type": "lever",
